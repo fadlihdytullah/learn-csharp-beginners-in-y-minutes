@@ -1,0 +1,2 @@
+double:  False (0.30000000000000004)
+decimal: True (0.3)

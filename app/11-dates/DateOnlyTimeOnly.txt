@@ -1,0 +1,5 @@
+Birthday: 1995-04-17
+Opens: 09:00, closes: 17:30
+Open at 12:45? True
+Date part: 2026-09-28
+Time part: 10:30

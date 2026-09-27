@@ -1,0 +1,2 @@
+Smallest 3: 6, 5, 4
+Original list: 1, 2, 3

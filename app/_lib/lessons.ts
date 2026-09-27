@@ -1,0 +1,16 @@
+export const lessons = [
+  { section: "Getting Started", slug: "01-intro", title: ".NET & First Program", blurb: "What C# and .NET are, and how code becomes a running program." },
+  { section: "Types & Expressions", slug: "02-variables", title: "Variables & Types", blurb: "Declaring variables and constants, and the built-in primitive types." },
+  { section: "Types & Expressions", slug: "03-type-conversion", title: "Type Conversion", blurb: "Implicit, explicit, Convert, Parse, and the safe TryParse." },
+  { section: "Types & Expressions", slug: "04-operators", title: "Operators", blurb: "Arithmetic, comparison, logical, and the null operators." },
+  { section: "Non-Primitive Types", slug: "05-classes", title: "Classes", blurb: "Blueprints for objects: fields, methods, and static members." },
+  { section: "Non-Primitive Types", slug: "06-structs-enums", title: "Structs & Enums", blurb: "Lightweight value types and named constants." },
+  { section: "Non-Primitive Types", slug: "07-value-vs-reference", title: "Value vs Reference", blurb: "Why copying an int and copying an object behave differently." },
+  { section: "Control Flow", slug: "08-conditionals", title: "Conditionals", blurb: "if/else, switch statements, switch expressions, and ?:." },
+  { section: "Control Flow", slug: "09-loops", title: "Loops", blurb: "for, foreach, while, do-while, break, and continue." },
+  { section: "Collections", slug: "10-arrays-lists", title: "Arrays & Lists", blurb: "Fixed-size arrays and the growable List<T>." },
+  { section: "Working with Data", slug: "11-dates", title: "Dates & Times", blurb: "DateTime, TimeSpan, DateOnly, and why APIs use UTC." },
+  { section: "Working with Data", slug: "12-strings", title: "Strings & Text", blurb: "Formatting, searching, splitting, and StringBuilder." },
+  { section: "Working with Data", slug: "13-files", title: "Files & Directories", blurb: "File, Directory, and Path for reading and writing to disk." },
+  { section: "Wrap-up", slug: "14-debugging", title: "Debugging", blurb: "Breakpoints, stepping, and defensive code that fails early." },
+];

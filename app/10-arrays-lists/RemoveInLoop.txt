@@ -1,0 +1,3 @@
+foreach failed: the list changed while looping
+Odd numbers: 1, 3, 5
+After RemoveAll: 1, 3

@@ -1,0 +1,4 @@
+Smallest 3: 1, 2, 3
+Original list: 4, 1, 6, 2, 5, 3
+Rejected: count ('10') must be less than or equal to '6'. (Parameter 'count')
+Actual value was 10.

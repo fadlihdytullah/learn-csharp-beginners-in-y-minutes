@@ -1,0 +1,5 @@
+Text file: a.txt
+Text file: b.txt
+Folders: 2
+docs has 3 files
+Root exists? False

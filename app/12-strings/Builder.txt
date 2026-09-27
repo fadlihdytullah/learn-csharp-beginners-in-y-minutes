@@ -1,0 +1,5 @@
+== Receipt
+------------
+- Coffee
+- Bagel
+- Juice

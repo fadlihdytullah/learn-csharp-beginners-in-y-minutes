@@ -1,0 +1,2 @@
+struct: pointA.X = 1
+class:  boxA.X   = 50

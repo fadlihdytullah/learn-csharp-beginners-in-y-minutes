@@ -1,0 +1,6 @@
+Exists? True
+Buy milk
+Learn C#
+Lines: 2, first: Buy milk
+Backup exists? True
+Notes exists after delete? False

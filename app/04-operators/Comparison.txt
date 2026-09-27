@@ -1,0 +1,6 @@
+age >= 18: True
+age == 21: False
+age != 21: True
+age >= 18 && hasTicket: True
+age < 18 || hasTicket:  True
+!isBanned: True

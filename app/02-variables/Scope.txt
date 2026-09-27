@@ -1,0 +1,2 @@
+Inside the block: bonus = 5, total = 5
+Outside the block: total = 5

@@ -1,0 +1,7 @@
+Pi: 3.14
+Visitors: 1,234,567
+Price: 19.50
+Rate: 25.6 %
+Order: 00042
+|Item    |  Qty|
+|Apple   |    3|

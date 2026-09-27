@@ -1,0 +1,6 @@
+data/reports/sales-2026.csv
+File name: sales-2026.csv
+Without extension: sales-2026
+Extension: .csv
+Folder: data/reports
+Changed: data/reports/sales-2026.json

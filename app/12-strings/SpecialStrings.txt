@@ -1,0 +1,10 @@
+Line one
+Line two
+Name:	Ada
+She said "hi"
+C:\Users\ada\notes.txt
+{
+  "name": "Ada",
+  "role": "admin"
+}
+{ "name": "Linus" }

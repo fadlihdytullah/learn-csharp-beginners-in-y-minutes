@@ -1,0 +1,11 @@
+[Learn C# in Y Minutes]
+LEARN C# IN Y MINUTES
+learn c# in y minutes
+Length: 21
+Index of 'C#': 6
+Substring(6, 2): C#
+Range [..5]: Learn
+Learn C# in 10 Minutes
+Contains 'Minutes'? True
+StartsWith 'learn' (ignore case)? True
+Blank? True

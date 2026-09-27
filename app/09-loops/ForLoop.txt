@@ -1,0 +1,6 @@
+Lap 1
+Lap 2
+Lap 3
+Lap 4
+Lap 5
+Even numbers from 1 to 10: 5

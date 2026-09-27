@@ -1,0 +1,7 @@
+Movie: 02:15:00
+Hours: 2, Minutes: 15
+TotalMinutes: 135
+Ad: 01:30:00
+Together: 03:45:00
+Days until Christmas: 88
+Christmas minus 1 week: 2026-12-18

@@ -1,0 +1,6 @@
+Kind: Utc
+ISO 8601: 2026-09-28T07:00:00.0000000Z
+Jakarta: 2026-09-28T14:00:00.0000000+07:00
+Same moment in UTC: 2026-09-28T07:00:00.0000000Z
+Same instant as London 08:00? True
+Parsed offset: 00:00:00

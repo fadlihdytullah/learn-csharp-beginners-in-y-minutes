@@ -1,0 +1,6 @@
+Index of 9: 2
+Index of 99: -1
+Copy: 3, 7, 9
+Sorted: 2, 3, 6, 7, 9, 14
+Reversed: 14, 9, 7, 6, 3, 2
+Cleared: 0, 0, 7, 6, 3, 2

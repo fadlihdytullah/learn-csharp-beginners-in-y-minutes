@@ -1,0 +1,5 @@
+First score: 90
+Names: 3
+Last name: Grace
+Middle: 20, 30, 40
+Default values: 0, 0

@@ -1,0 +1,4 @@
+Hi, I am Grace.
+Hi, I am Linus.
+People created: 2
+Math.Max(3, 7) = 7
