@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "02. Variables & Types" };
@@ -109,6 +110,41 @@ export default function Page() {
 }`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "After `var city = \"Bandung\";`, what is the type of `city`?",
+            options: [
+              "Anything: var can change type later",
+              "`string`, forever",
+              "`object`",
+            ],
+            answer: 1,
+            explanation: "`var` infers the type once from the value. The variable stays strongly typed.",
+          },
+          {
+            q: "Which type should hold a product price?",
+            options: [
+              "`double`",
+              "`float`",
+              "`decimal`",
+            ],
+            answer: 2,
+            explanation: "`decimal` stores base-10 values exactly. `double` only approximates values like 0.1.",
+          },
+          {
+            q: "An `int` grows past its maximum outside a `checked` block. What happens?",
+            options: [
+              "It silently wraps around to the minimum",
+              "The program throws an error",
+              "It turns into a `long`",
+            ],
+            answer: 0,
+            explanation: "Overflow wraps silently. Wrap risky math in `checked` to get an error instead.",
+          },
+        ]}
+      />
     </>
   );
 }

@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "14. Debugging" };
@@ -133,6 +134,41 @@ export default function Page() {
 });`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "What does Step over do?",
+            options: [
+              "Runs the current line without entering methods",
+              "Enters the method on the current line",
+              "Finishes the current method",
+            ],
+            answer: 0,
+            explanation: "Step into enters the method; Step out finishes it and returns to the caller.",
+          },
+          {
+            q: "How do you pause only on pass `i == 3` of a long loop?",
+            options: [
+              "Add a breakpoint for every pass",
+              "A conditional breakpoint",
+              "Add `Console.WriteLine` calls",
+            ],
+            answer: 1,
+            explanation: "Right-click a breakpoint and add a condition: it only pauses when the condition is true.",
+          },
+          {
+            q: "What is a guard clause?",
+            options: [
+              "A try/catch around the whole method",
+              "Code that hides errors from users",
+              "A check at the top of a method that throws early on invalid input",
+            ],
+            answer: 2,
+            explanation: "Fail loudly and early, for example with `ArgumentNullException.ThrowIfNull`.",
+          },
+        ]}
+      />
     </>
   );
 }

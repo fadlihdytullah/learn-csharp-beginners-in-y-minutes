@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "09. Loops" };
@@ -111,6 +112,41 @@ export default function Page() {
 });`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "Which loop always runs its body at least once?",
+            options: [
+              "`while`",
+              "`do-while`",
+              "`for`",
+            ],
+            answer: 1,
+            explanation: "`do-while` checks the condition after each pass.",
+          },
+          {
+            q: "What can `random.Next(1, 7)` return?",
+            options: [
+              "1 to 7",
+              "0 to 6",
+              "1 to 6",
+            ],
+            answer: 2,
+            explanation: "The lower bound is included and the upper bound is excluded.",
+          },
+          {
+            q: "What does `continue` do?",
+            options: [
+              "Skips the rest of the current pass and moves to the next",
+              "Exits the loop",
+              "Restarts the loop from the beginning",
+            ],
+            answer: 0,
+            explanation: "`break` is the one that exits the loop entirely.",
+          },
+        ]}
+      />
     </>
   );
 }

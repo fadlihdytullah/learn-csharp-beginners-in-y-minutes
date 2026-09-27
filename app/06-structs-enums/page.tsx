@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "06. Structs & Enums" };
@@ -73,6 +74,41 @@ export default function Page() {
     options.SerializerOptions.Converters.Add(new JsonStringEnumConverter()));`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "`Color` is a struct. After `var orange = red; orange.G = 165;`, what is `red.G`?",
+            options: [
+              "165",
+              "Unchanged",
+              "A compile error",
+            ],
+            answer: 1,
+            explanation: "Assigning a struct copies all its data, so the two variables are independent.",
+          },
+          {
+            q: "When should you pick a struct over a class?",
+            options: [
+              "For a small single value with few fields that rarely changes",
+              "For most of your custom types",
+              "When the type has many methods",
+            ],
+            answer: 0,
+            explanation: "Default to a class. Structs fit small values like a color, a point, or an amount.",
+          },
+          {
+            q: "Why give enum members explicit values when they are stored in a database?",
+            options: [
+              "It makes them faster",
+              "The compiler requires it",
+              "Otherwise inserting a new member silently renumbers the rest",
+            ],
+            answer: 2,
+            explanation: "Stored numbers must keep meaning the same thing, even after the enum changes.",
+          },
+        ]}
+      />
     </>
   );
 }

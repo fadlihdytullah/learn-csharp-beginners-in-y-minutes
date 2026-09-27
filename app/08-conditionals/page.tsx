@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "08. Conditionals" };
@@ -71,6 +72,41 @@ export default function Page() {
 });`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "What happens with `if (count)` where `count` is an `int`?",
+            options: [
+              "It runs when `count` is not 0",
+              "A compile error: the condition must be a `bool`",
+              "It runs when `count` is 0",
+            ],
+            answer: 1,
+            explanation: "C# does not treat 0 or `null` as false. Write `count > 0`.",
+          },
+          {
+            q: "In a switch expression, what does `_` match?",
+            options: [
+              "Anything not matched by earlier arms",
+              "Only null",
+              "An empty string",
+            ],
+            answer: 0,
+            explanation: "Arms are checked in order, so the discard goes last as the catch-all.",
+          },
+          {
+            q: "What happens when a `case` section in a switch statement has no `break`?",
+            options: [
+              "It falls through to the next case",
+              "The switch loops forever",
+              "A compile error",
+            ],
+            answer: 2,
+            explanation: "C# never falls through by accident. Every section ends with `break` or `return`.",
+          },
+        ]}
+      />
     </>
   );
 }

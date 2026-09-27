@@ -1,4 +1,5 @@
 import Figure from "../_lib/Figure";
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "07. Value vs Reference" };
@@ -113,6 +114,41 @@ export default function Page() {
 }`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "`Person` is a class. After `var p2 = p1; p2.Age = 40;`, what is `p1.Age`?",
+            options: [
+              "40",
+              "Unchanged",
+              "A compile error",
+            ],
+            answer: 0,
+            explanation: "Both variables hold a reference to the same object, so a change through one shows through the other.",
+          },
+          {
+            q: "Which of these is a reference type?",
+            options: [
+              "`int`",
+              "`DateTime`",
+              "`int[]`",
+            ],
+            answer: 2,
+            explanation: "Arrays, classes, and strings are reference types. `int` and `DateTime` are value types.",
+          },
+          {
+            q: "After `name.ToUpper();` (result unused), what is `name`?",
+            options: [
+              "Uppercase",
+              "Unchanged",
+              "`null`",
+            ],
+            answer: 1,
+            explanation: "Strings can never be modified. `ToUpper` returns a new string that you have to use.",
+          },
+        ]}
+      />
     </>
   );
 }

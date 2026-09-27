@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "13. Files & Directories" };
@@ -93,6 +94,41 @@ export default function Page() {
 });`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "What does `File.WriteAllText` do to an existing file?",
+            options: [
+              "Appends to the end",
+              "Overwrites it",
+              "Throws an exception",
+            ],
+            answer: 1,
+            explanation: "Use `AppendAllText` to add to the end instead.",
+          },
+          {
+            q: "How should you build a file path?",
+            options: [
+              "Glue strings with `\"/\"`",
+              "Glue strings with `\"\\\\\"`",
+              "`Path.Combine`",
+            ],
+            answer: 2,
+            explanation: "`Path.Combine` picks the right separator for the operating system.",
+          },
+          {
+            q: "Which file methods should a web server use?",
+            options: [
+              "The `Async` versions, with `await`",
+              "The normal versions, they are faster",
+              "It does not matter",
+            ],
+            answer: 0,
+            explanation: "Servers handle many requests at once, so they should not block while waiting for the disk.",
+          },
+        ]}
+      />
     </>
   );
 }

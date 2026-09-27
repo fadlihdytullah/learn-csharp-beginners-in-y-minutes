@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Continue from "./_lib/Continue";
 import { lessons } from "./_lib/lessons";
 import PixelTitle from "./_lib/PixelTitle";
 import Source from "./_lib/Source";
@@ -22,6 +23,8 @@ export default function Home() {
         <li>Modern C# 14</li>
         <li>Built toward Web APIs</li>
       </ul>
+
+      <Continue />
 
       <Source title="Run any example" lang="bash" code="dotnet run app/01-intro/Hello.cs" />
 

@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "11. Dates & Times" };
@@ -93,6 +94,41 @@ export default function Page() {
         />
         <Source title="GET /time" lang="json" code={`{ "now": "2026-09-28T07:00:00.1234567+00:00" }`} />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "After `date.AddDays(1);` (result unused), what is `date`?",
+            options: [
+              "One day later",
+              "Unchanged",
+              "An exception",
+            ],
+            answer: 1,
+            explanation: "`DateTime` is immutable. `AddDays` returns a new value you have to use.",
+          },
+          {
+            q: "For a span of 2 hours 15 minutes, what are `Minutes` and `TotalMinutes`?",
+            options: [
+              "15 and 135",
+              "135 and 15",
+              "135 and 135",
+            ],
+            answer: 0,
+            explanation: "`Minutes` is only the minutes part. `TotalMinutes` is the whole span.",
+          },
+          {
+            q: "How should a server get the current time to store?",
+            options: [
+              "`DateTime.Now`",
+              "`TimeOnly`",
+              "`DateTimeOffset.UtcNow`",
+            ],
+            answer: 2,
+            explanation: "Store UTC. `DateTime.Now` depends on where the server runs.",
+          },
+        ]}
+      />
     </>
   );
 }

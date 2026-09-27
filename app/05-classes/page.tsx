@@ -1,4 +1,5 @@
 import Figure from "../_lib/Figure";
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "05. Classes" };
@@ -83,6 +84,41 @@ public class ProductsController : ControllerBase
 }`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "What is the difference between a class and an object?",
+            options: [
+              "They are the same thing",
+              "A class is a blueprint; an object is an instance built from it",
+              "An object is a blueprint for classes",
+            ],
+            answer: 1,
+            explanation: "One class can produce as many objects as you need, each with its own fields.",
+          },
+          {
+            q: "Why can you call `Math.Max(...)` without creating a `Math` object?",
+            options: [
+              "`Max` is static: it belongs to the class itself",
+              "C# creates the object automatically",
+              "`Math` is a keyword",
+            ],
+            answer: 0,
+            explanation: "Static members belong to the class, so you call them on the class name.",
+          },
+          {
+            q: "A method's return type is `void`. What does it return?",
+            options: [
+              "`null`",
+              "Any type it likes",
+              "Nothing",
+            ],
+            answer: 2,
+            explanation: "`void` means the method does its job and returns no value.",
+          },
+        ]}
+      />
     </>
   );
 }

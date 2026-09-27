@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "03. Type Conversion" };
@@ -79,6 +80,41 @@ export default function Page() {
           code={`app.MapGet("/products/{id:int}", (int id) => $"Product {id}");`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "What is `(int)9.99`?",
+            options: [
+              "10",
+              "9",
+              "A compile error",
+            ],
+            answer: 1,
+            explanation: "A cast cuts off the decimals. `Convert.ToInt32` would round to 10.",
+          },
+          {
+            q: "What does `int.Parse(\"abc\")` do?",
+            options: [
+              "Returns 0",
+              "Returns `null`",
+              "Throws a `FormatException`",
+            ],
+            answer: 2,
+            explanation: "`Parse` throws on bad input and crashes the program unless you catch it.",
+          },
+          {
+            q: "What is the safest way to read a number typed by a user?",
+            options: [
+              "`int.TryParse`",
+              "`int.Parse`",
+              "A cast: `(int)input`",
+            ],
+            answer: 0,
+            explanation: "`TryParse` never throws. It returns `true` or `false` and hands back the number through `out`.",
+          },
+        ]}
+      />
     </>
   );
 }

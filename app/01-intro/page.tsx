@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "01. .NET & First Program" };
@@ -105,6 +106,41 @@ app.Run();`}
         />
         <p>Same language, same runtime, same <code>dotnet run</code>. It just listens for HTTP requests instead of exiting.</p>
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "What does the C# compiler produce?",
+            options: [
+              "Native machine code for your CPU",
+              "IL, packed into an assembly (.dll)",
+              "JavaScript for the browser",
+            ],
+            answer: 1,
+            explanation: "The CLR then JIT-compiles that IL into native code when the program starts.",
+          },
+          {
+            q: "What are top-level statements?",
+            options: [
+              "A shortcut: the compiler wraps them in a class with a Main method",
+              "A mode that runs C# without any class at all",
+              "A feature only available in Web APIs",
+            ],
+            answer: 0,
+            explanation: "Main is still the entry point. The compiler just writes it for you.",
+          },
+          {
+            q: "What does the `$` before a string do?",
+            options: [
+              "Marks the value as money",
+              "Makes the string a constant",
+              "Lets you insert values with `{braces}`",
+            ],
+            answer: 2,
+            explanation: "It turns the string into an interpolated string, so `{name}` is replaced by the value of `name`.",
+          },
+        ]}
+      />
     </>
   );
 }

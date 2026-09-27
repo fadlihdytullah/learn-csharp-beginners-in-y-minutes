@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "10. Arrays & Lists" };
@@ -92,6 +93,41 @@ app.MapGet("/todos", () => todos);`}
         />
         <Source title="GET /todos" lang="json" code={`["Learn C#", "Build an API"]`} />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "Can an array grow after you create it?",
+            options: [
+              "Yes, automatically",
+              "No, its size is fixed. Use `List<T>` to grow",
+              "Yes, it doubles when full",
+            ],
+            answer: 1,
+            explanation: "Arrays have a fixed `Length`. Lists resize themselves and expose `Count`.",
+          },
+          {
+            q: "What is `names[^1]`?",
+            options: [
+              "The first element",
+              "The second element",
+              "The last element",
+            ],
+            answer: 2,
+            explanation: "`^1` counts from the end.",
+          },
+          {
+            q: "What happens when you remove items from a list inside a foreach over that list?",
+            options: [
+              "It throws an `InvalidOperationException`",
+              "It works fine",
+              "It silently skips the removed items",
+            ],
+            answer: 0,
+            explanation: "Loop backwards with `for`, or use `RemoveAll` with a condition.",
+          },
+        ]}
+      />
     </>
   );
 }

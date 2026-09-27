@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "12. Strings & Text" };
@@ -103,6 +104,41 @@ export default function Page() {
 });`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "What should you use to build text inside a loop?",
+            options: [
+              "`+=` on a string",
+              "`StringBuilder`",
+              "`string.Join` on every pass",
+            ],
+            answer: 1,
+            explanation: "Strings are immutable, so `+=` creates a new string every pass. A `StringBuilder` is a mutable buffer.",
+          },
+          {
+            q: "What is `\"Hello\".IndexOf(\"z\")`?",
+            options: [
+              "0",
+              "An exception",
+              "-1",
+            ],
+            answer: 2,
+            explanation: "`IndexOf` returns -1 when nothing is found.",
+          },
+          {
+            q: "Which check catches `null`, `\"\"`, and `\"   \"`?",
+            options: [
+              "`string.IsNullOrWhiteSpace`",
+              "`string.IsNullOrEmpty`",
+              "`text == \"\"`",
+            ],
+            answer: 0,
+            explanation: "`IsNullOrEmpty` misses the all-spaces case.",
+          },
+        ]}
+      />
     </>
   );
 }

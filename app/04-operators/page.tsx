@@ -1,3 +1,4 @@
+import Quiz from "../_lib/Quiz";
 import Source from "../_lib/Source";
 
 export const metadata = { title: "04. Operators" };
@@ -100,6 +101,41 @@ export default function Page() {
 });`}
         />
       </div>
+
+      <Quiz
+        questions={[
+          {
+            q: "What is `7 / 2` when both are `int`?",
+            options: [
+              "3.5",
+              "3",
+              "4",
+            ],
+            answer: 1,
+            explanation: "Integer division throws the fraction away. Cast one side to `double` to keep it.",
+          },
+          {
+            q: "After `int x = 5; int y = x++;`, what is `y`?",
+            options: [
+              "5",
+              "6",
+              "4",
+            ],
+            answer: 0,
+            explanation: "`x++` returns the old value, then increments. `x` is 6, `y` is 5.",
+          },
+          {
+            q: "What is `name ?? \"Guest\"` when `name` is `null`?",
+            options: [
+              "`null`",
+              "A `NullReferenceException`",
+              "`\"Guest\"`",
+            ],
+            answer: 2,
+            explanation: "`a ?? b` gives `b` whenever `a` is `null`.",
+          },
+        ]}
+      />
     </>
   );
 }
