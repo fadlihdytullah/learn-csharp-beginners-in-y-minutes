@@ -4,7 +4,7 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { ArrowUpIcon, KeyRoundIcon, SettingsIcon, SparklesIcon, SquarePenIcon, Trash2Icon, XIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState, useSyncExternalStore, type FormEvent } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type FormEvent, type ReactNode } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remend from "remend";
@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Kbd } from "@/components/ui/kbd";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
+import CopyButton from "./CopyButton";
 import { lessons } from "./lessons";
 
 const MODELS = [
@@ -53,6 +54,18 @@ function set(key: string, value: string) {
 
 function useStored(key: string) {
   return useSyncExternalStore(subscribe, () => get(key), () => "");
+}
+
+function Pre({ children }: { children?: ReactNode }) {
+  const ref = useRef<HTMLPreElement>(null);
+  return (
+    <div className="relative">
+      <pre ref={ref} className="pr-10">
+        {children}
+      </pre>
+      <CopyButton compact text={() => ref.current?.innerText ?? ""} className="absolute top-1.5 right-1.5" />
+    </div>
+  );
 }
 
 function useWide() {
@@ -317,7 +330,7 @@ export default function AskAI() {
                 >
                   {m.parts.map((part, i) =>
                     part.type === "text" ? (
-                      <Markdown key={i} remarkPlugins={[remarkGfm]}>
+                      <Markdown key={i} remarkPlugins={[remarkGfm]} components={{ pre: Pre }}>
                         {remend(part.text)}
                       </Markdown>
                     ) : null,

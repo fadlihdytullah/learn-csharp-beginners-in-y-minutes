@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { codeToHtml } from "shiki";
 import AskButton from "./AskButton";
+import CopyButton from "./CopyButton";
 
 type Props = { file?: string; code?: string; title?: string; lang?: string };
 
@@ -27,7 +28,10 @@ export default async function Source({ file, code = "", title, lang = "csharp" }
       {title && (
         <figcaption className="flex items-center gap-2 border-b bg-surface px-4 py-2.5 font-mono text-[12px] text-fg-muted before:size-1.5 before:rounded-full before:bg-fg-subtle before:content-['']">
           {title}
-          {file && <AskButton question={`Explain ${path.basename(file)} line by line.`} />}
+          <span className="-my-1.5 ml-auto flex items-center gap-1 font-sans">
+            {file && <AskButton question={`Explain ${path.basename(file)} line by line.`} />}
+            <CopyButton text={code.trim()} />
+          </span>
         </figcaption>
       )}
       <div className="[&_pre]:bg-transparent! [&_pre]:px-5 [&_pre]:py-[18px] [&_pre]:font-mono [&_pre]:text-[13px] [&_pre]:leading-[1.7] [&_pre]:overflow-x-auto" dangerouslySetInnerHTML={{ __html: html }} />
