@@ -1,12 +1,12 @@
 const rows = [
   "#######",
+  "##oooo#",
+  "##o##o#",
+  "##oooo#",
+  "##oooo#",
+  "#######",
   "#.....#",
-  "#.....#",
-  "#ooooo#",
-  "#ooooo#",
-  ".#ooo#.",
-  "..#o#..",
-  "...#...",
+  "#######",
 ];
 
 function path(ch: string) {
@@ -21,7 +21,7 @@ function path(ch: string) {
 
 export default function BrandMark() {
   return (
-    <svg className="brand-mark" viewBox="0 0 7 8" aria-hidden shapeRendering="crispEdges">
+    <svg className="h-4 w-[14px]" viewBox="0 0 7 8" aria-hidden shapeRendering="crispEdges">
       <path d={path("#")} fill="var(--fg)" />
       <path d={path("o")} fill="var(--fg-subtle)" />
     </svg>

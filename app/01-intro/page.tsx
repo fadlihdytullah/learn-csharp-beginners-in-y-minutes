@@ -24,7 +24,7 @@ export default function Page() {
         <svg viewBox="0 0 760 130" role="img" aria-label="C# code is compiled to IL, then the CLR compiles IL to machine code">
           <g fill="none" stroke="currentColor" strokeWidth="1.2">
             <rect x="1" y="30" width="150" height="56" rx="8" />
-            <rect x="305" y="30" width="150" height="56" rx="8" stroke="var(--accent)" />
+            <rect x="305" y="30" width="150" height="56" rx="8" stroke="var(--brand)" />
             <rect x="609" y="30" width="150" height="56" rx="8" />
             <path d="M155 58h144m-8-5 8 5-8 5M459 58h144m-8-5 8 5-8 5" />
           </g>

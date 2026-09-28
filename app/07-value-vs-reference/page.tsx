@@ -57,7 +57,7 @@ export default function Page() {
             <rect x="60" y="96" width="200" height="30" rx="6" />
             <rect x="60" y="136" width="200" height="30" rx="6" />
             <rect x="60" y="176" width="200" height="30" rx="6" />
-            <rect x="490" y="106" width="180" height="70" rx="8" stroke="var(--accent)" />
+            <rect x="490" y="106" width="180" height="70" rx="8" stroke="var(--brand)" />
             <path d="M244 151 486 133M244 191 486 151" markerEnd="url(#vr-arrow)" />
           </g>
           <circle cx="244" cy="151" r="3" fill="currentColor" />

@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { codeToHtml } from "shiki";
+import AskButton from "./AskButton";
 
 type Props = { file?: string; code?: string; title?: string; lang?: string };
 
@@ -22,10 +23,17 @@ export default async function Source({ file, code = "", title, lang = "csharp" }
   });
 
   return (
-    <figure className="source">
-      {title && <figcaption>{title}</figcaption>}
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-      {output !== null && <pre className="output">{output}</pre>}
+    <figure className="overflow-hidden rounded-xl border bg-bg-elev">
+      {title && (
+        <figcaption className="flex items-center gap-2 border-b bg-surface px-4 py-2.5 font-mono text-[12px] text-fg-muted before:size-1.5 before:rounded-full before:bg-fg-subtle before:content-['']">
+          {title}
+          {file && <AskButton question={`Explain ${path.basename(file)} line by line.`} />}
+        </figcaption>
+      )}
+      <div className="[&_pre]:bg-transparent! [&_pre]:px-5 [&_pre]:py-[18px] [&_pre]:font-mono [&_pre]:text-[13px] [&_pre]:leading-[1.7] [&_pre]:overflow-x-auto" dangerouslySetInnerHTML={{ __html: html }} />
+      {output !== null && <pre className="overflow-x-auto border-t border-dashed border-border-strong bg-bg px-5 py-[18px] font-mono text-[13px] leading-[1.7] whitespace-pre-wrap text-fg-muted before:mb-1.5 before:block before:font-sans before:text-[12px] before:text-fg-subtle before:content-['Output']">
+          {output}
+        </pre>}
     </figure>
   );
 }

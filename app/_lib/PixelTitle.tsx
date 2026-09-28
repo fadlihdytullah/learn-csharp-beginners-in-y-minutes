@@ -40,8 +40,8 @@ export default function PixelTitle({ lines, label }: { lines: string[]; label: s
   const width = Math.max(...paths.map((p) => p.width));
   const height = lines.length * 8 - 2;
   return (
-    <h1 className="pixel-title">
-      <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label={label}>
+    <h1>
+      <svg className="mt-2 mb-7 block h-auto w-[min(100%,560px)]" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={label}>
         <defs>
           <linearGradient id="pixel-ink" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="var(--fg)" />

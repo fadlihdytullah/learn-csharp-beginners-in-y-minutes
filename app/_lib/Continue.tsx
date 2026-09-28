@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 import { lessons } from "./lessons";
 import { useProgress } from "./progress";
 
@@ -11,10 +12,10 @@ export default function Continue() {
 
   const next = lessons.find((l) => !done.includes(l.slug));
   return (
-    <p className="continue">
-      <span className="pill">
+    <p className="flex flex-wrap items-center gap-3 text-[14px]">
+      <Badge>
         {count}/{lessons.length} completed
-      </span>
+      </Badge>
       {next ? <Link href={`/${next.slug}`}>Continue: {next.title} →</Link> : "All lessons done. Nice work!"}
     </p>
   );
